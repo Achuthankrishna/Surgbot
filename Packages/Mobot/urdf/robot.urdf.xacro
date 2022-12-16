@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- Name your robot here -->
+<robot name ="mobot" xmlns:xacro="http://wiki.ros.org/xacro">
+
+<!-- Include your urdf files here -->
+	<!-- Include Robot's urdf filepath -->
+	<!-- Include Lidar's urdf filepath -->
+<xacro:include filename="$(find model)/urdf/mobot.urdf"/>

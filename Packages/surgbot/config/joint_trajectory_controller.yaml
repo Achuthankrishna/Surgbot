@@ -1,0 +1,46 @@
+surgbot:
+  robot_arm_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints: [link_2,link_3, link_4, link_5, link_6, link_7]
+  #Controller to control end effector joints
+  hand_ee_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints: [grip_1, grip_2]
+  joint_state_controller: 
+    publish_rate: 50
+    type: joint_state_controller/JointStateController
+  gazebo_ros_control:
+    pid_gains:
+      frontrightjoint: 
+        p: 0.01 
+        i: 0.0
+        d: 0.0
+      frontleftwheel: 
+        p: 0.01
+        i: 0.0
+        d: 0.0
+      rightwheeljoint: 
+        p: 0.01 
+        i: 0.0
+        d: 0.0
+      rearleftwheel: 
+        p: 0.01 
+        i: 0.0 
+        d: 0.0  
+
+  rear_rmotor: 
+    joint: rightwheeljoint
+    pid: {p: 0.001, i: 0.0, d: 0.0}
+    type: velocity_controllers/JointVelocityController
+  rear_lmotor: 
+    joint: rearleftwheel
+    pid: {p: 0.001, i: 0.0, d: 0.0}
+    type: velocity_controllers/JointVelocityController
+  right_motor: 
+    joint: frontrightjoint
+    pid: {p: 0.001, i: 0.0, d: 0.0}
+    type: velocity_controllers/JointVelocityController
+  left_motor: 
+    joint: frontleftwheel
+    pid: {p: 0.001, i: 0.00, d: 0.0}
+    type: velocity_controllers/JointVelocityController

@@ -1,0 +1,133 @@
+mobot:
+  joint_state_controller: 
+    publish_rate: 50
+    type: joint_state_controller/JointStateController
+  gazebo_ros_control:
+    pid_gains:
+      frontrightjoint: 
+        p: 0.01 
+        i: 0.0
+        d: 0.0
+      frontleftwheel: 
+        p: 0.01
+        i: 0.0
+        d: 0.0
+      rightwheeljoint: 
+        p: 0.01 
+        i: 0.0
+        d: 0.0
+      rearleftwheel: 
+        p: 0.01 
+        i: 0.0 
+        d: 0.0  
+
+  rear_rmotor: 
+    joint: rightwheeljoint
+    pid: {p: 0.001, i: 0.0, d: 0.0}
+    type: velocity_controllers/JointVelocityController
+  rear_lmotor: 
+    joint: rearleftwheel
+    pid: {p: 0.001, i: 0.0, d: 0.0}
+    type: velocity_controllers/JointVelocityController
+  right_motor: 
+    joint: frontrightjoint
+    pid: {p: 0.001, i: 0.0, d: 0.0}
+    type: velocity_controllers/JointVelocityController
+  left_motor: 
+    joint: frontleftwheel
+    pid: {p: 0.001, i: 0.00, d: 0.0}
+    type: velocity_controllers/JointVelocityController
+    # Controller 4
+
+  link_1_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: link_2 
+    pid : {p: 20.0, i: 1.0, d: 20.0}
+    gazebo_ros_control:
+      link_2:
+        rotating_arm_joint:
+          p = 10.0
+          i = 1.0
+          d = 10.0
+
+  # Controller 5
+  link_2_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: link_3 
+    pid : {p: 50.0, i: 10.0, d: 60.0}
+    gazebo_ros_control:
+      pid_gains:
+        link_3:
+          p = 10.0
+          i = 10.0
+          d = 10.0
+
+  # Controller 6
+  link_3_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: link_4 
+    pid : {p: 50.0, i: 10.0, d: 60.0}
+    gazebo_ros_control:
+      pid_gains:
+        link_3:
+          p = 10.0
+          i = 100.0
+          d = 10.0
+
+  # Controller 7
+  link_4_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: link_5 
+    pid : {p: 20.0, i: 50.0, d: 10.0}
+    gazebo_ros_control:
+      pid_gains:
+        link_4:
+          p = 10.0
+          i = 10.0
+          d = 1.0
+
+  # Controller 8
+  link_5_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: link_6 
+    pid : {p: 50.0, i: 10.0, d: 5.0}
+    gazebo_ros_control:
+      pid_gains:
+        link_6:
+          p = 10.0
+          i = 10.0
+          d = 1.0
+
+
+  # Controller 8
+  link_6_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: link_7 
+    pid : {p: 50.0, i: 10.0, d: 1.0}
+    gazebo_ros_control:
+      link_7:
+        right_jaw_joint:
+          p = 10.0
+          i = 10.0
+          d = 1.0
+
+  link_7_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: grip_1 
+    pid : {p: 10.0, i: 50.0, d: 20.0}
+    gazebo_ros_control:
+      pid_gains:
+        grip_1:
+          p = 10.0
+          i = 100.0
+          d = 10.0
+  link_8_motor: 
+    type: effort_controllers/JointPositionController # Type of controller. 
+    joint: grip_2 
+    pid : {p: 10.0, i: 50.0, d: 20.0}
+    gazebo_ros_control:
+      pid_gains:
+        grip_2:
+          p = 10.0
+          i = 10.0
+          d = 1.0

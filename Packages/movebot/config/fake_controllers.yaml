@@ -1,0 +1,20 @@
+controller_list:
+  - name: fake_Hand_ee_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - grip_1
+      - grip_2
+  - name: fake_arm_group_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - link_2
+      - link_3
+      - link_4
+      - link_5
+      - link_6
+      - link_7
+initial:  # Define initial robot poses per group
+  - group: Hand_ee
+    pose: ee_closed
+  - group: arm_group
+    pose: zeropose

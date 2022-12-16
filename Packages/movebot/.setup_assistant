@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: surgbot
+    relative_path: urdf/surgbot.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/surgbot.srdf
+  CONFIG:
+    author_name: ACHUTHAN
+    author_email: ACH08@EMAIL.COM
+    generated_timestamp: 1670470405

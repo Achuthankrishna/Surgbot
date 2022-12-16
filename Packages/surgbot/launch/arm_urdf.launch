@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="arg_x" default="0.00" />
+  <arg name="arg_y" default="0.00" />
+  <arg name="arg_z" default="0.00" />
+  <arg name="arg_R" default="0.00" />
+  <arg name="arg_P" default="0.00" />
+  <arg name="arg_Y" default="0.00" />
+  <param name="robot_description" textfile="$(find surgbot)/urdf/surgbot.urdf" />
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find surgbot)/world/hos2.world"/>
+  </include>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="use_gui" value="False"/>
+    </node>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model surgbot" />
+  
+  <rosparam command="load" file="$(find surgbot)/config/joint_trajectory_controller.yaml" />
+  <node name="base_controller_spawner" pkg="controller_manager" type="spawner" args="joint_state_controller hand_ee_controller robot_arm_controller rear_rmotor rear_lmotor right_motor left_motor"/> 
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+</launch>

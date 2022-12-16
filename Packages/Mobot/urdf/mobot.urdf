@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mobot">
+    <link name="dummy_link">
+  </link>
+  <joint name="dummy_joint" type="fixed">
+    <parent
+      link="dummy_link" />
+    <child
+      link="base_link" />
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <axis
+      xyz="0 0 0.009" />      
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.67161504763206E-05 -9.96929707160518E-18 0.224538707556981"
+        rpy="0 0 0" />
+      <mass
+        value="26.692910205457" />
+      <inertia
+        ixx="1.71189734613994"
+        ixy="-2.40913169363712E-16"
+        ixz="-6.33991383606451E-17"
+        iyy="1.27431160321352"
+        iyz="-3.16232789743585E-16"
+        izz="2.92969870819416" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.992156862745098 0.996078431372549 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 -0.01905"
+        rpy="0 0 0" />
+      <mass
+        value="0.094013226235365" />
+      <inertia
+        ixx="0.00198270843988776"
+        ixy="1.03019182797916E-19"
+        ixz="-3.08867976331008E-20"
+        iyy="0.00198270843988776"
+        iyz="8.10409449351113E-21"
+        izz="0.00373796598088299" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/front_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frontleftwheel"
+    type="continuous">
+    <origin
+      xyz="0.350600000000001 0.294399999999999 0.0827000000000001"
+      rpy="1.5707963267949 0 1.57079632679489" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_right">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-16 0 0.0190500000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0940132262353651" />
+      <inertia
+        ixx="0.00198270843988776"
+        ixy="4.35918888859529E-20"
+        ixz="-1.99449680904772E-20"
+        iyy="0.00198270843988776"
+        iyz="4.76045832029339E-22"
+        izz="0.003737965980883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/front_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frontrightjoint"
+    type="continuous">
+    <origin
+      xyz="-0.350599999999999 0.294400000000001 0.0827000000000001"
+      rpy="1.5707963267949 0 1.57079632679489" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rear_left">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0190500000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.094013226235365" />
+      <inertia
+        ixx="0.00198270843988776"
+        ixy="-1.624081534321E-19"
+        ixz="-6.08288500262666E-20"
+        iyy="0.00198270843988776"
+        iyz="-1.18373963231426E-20"
+        izz="0.00373796598088299" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/rear_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/rear_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rearleftwheel"
+    type="continuous">
+    <origin
+      xyz="0.350599999999999 -0.294400000000001 0.0827"
+      rpy="1.5707963267949 0 1.57079632679489" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rear_right">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 0.01905"
+        rpy="0 0 0" />
+      <mass
+        value="0.0940132262353651" />
+      <inertia
+        ixx="0.00198270843988776"
+        ixy="-1.08818392973721E-39"
+        ixz="2.72206371498453E-20"
+        iyy="0.00198270843988776"
+        iyz="-2.47506712013436E-35"
+        izz="0.003737965980883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/rear_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/rear_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightwheeljoint"
+    type="continuous">
+    <origin
+      xyz="-0.350600000000001 -0.294399999999999 0.0827"
+      rpy="1.5707963267949 0 1.57079632679489" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="-7.42810143639123E-08 -0.00978879657713761 0.0750910905801014"
+        rpy="0 0 0" />
+      <mass
+        value="2.07582206243551" />
+      <inertia
+        ixx="0.0279246936838049"
+        ixy="-4.73074519396789E-09"
+        ixz="2.57852028125316E-08"
+        iyy="0.0230662204658974"
+        iyz="-0.000715650397578893"
+        izz="0.0271604411837049" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="basem"
+    type="fixed">
+    <origin
+      xyz="0 0 0.255"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.00011281 0.0068507 0.067233"
+        rpy="0 0 0" />
+      <mass
+        value="2.1882" />
+      <inertia
+        ixx="0.02144"
+        ixy="-0.00018712"
+        ixz="6.9176E-05"
+        iyy="0.032759"
+        iyz="-0.0041883"
+        izz="0.030615" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.175"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="6.284"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.018802 -0.13534 -3.7488E-11"
+        rpy="0 0 0" />
+      <mass
+        value="2.2998" />
+      <inertia
+        ixx="0.087203"
+        ixy="0.0093725"
+        ixz="1.3582E-10"
+        iyy="0.02104"
+        iyz="2.6985E-11"
+        izz="0.077075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_3"
+    type="revolute">
+    <origin
+      xyz="-0.00118191583802444 0.0715077705397586 0.153769579636443"
+      rpy="-1.5707963267949 0 -1.55426933655184" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.0024388 0.0002859 -0.0555"
+        rpy="0 0 0" />
+      <mass
+        value="1.0805" />
+      <inertia
+        ixx="0.0047842"
+        ixy="-0.00077742"
+        ixz="6.9796E-19"
+        iyy="0.0060143"
+        iyz="3.0827E-19"
+        izz="0.0065924" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_4"
+    type="revolute">
+    <origin
+      xyz="0.0362174071193058 -0.388931402299904 0.0555"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.142"
+      upper="0"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-1.7734E-07 -2.3788E-06 0.12318"
+        rpy="0 0 0" />
+      <mass
+        value="1.2744" />
+      <inertia
+        ixx="0.016048"
+        ixy="3.1141E-05"
+        ixz="3.387E-08"
+        iyy="0.016464"
+        iyz="4.5427E-07"
+        izz="0.0039447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_5"
+    type="revolute">
+    <origin
+      xyz="0.0865584905966275 0.00839949040900234 -0.0555000000000001"
+      rpy="-0.609567887315726 1.57079631189374 -0.734408128398046" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.142"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="0.0044365 -0.024333 2.0817E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.32079" />
+      <inertia
+        ixx="0.00039297"
+        ixy="3.4564E-05"
+        ixz="6.6069E-20"
+        iyy="0.00020969"
+        iyz="-2.465E-21"
+        izz="0.00034491" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_6"
+    type="revolute">
+    <origin
+      xyz="0.000351610247741422 0.00471609605795009 0.31645149221301"
+      rpy="-1.57079632679489 1.45486631386844 -1.64521400874154" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.142"
+      effort="200"
+      velocity="2" />
+  </joint>
+  <link
+    name="link7">
+    <inertial>
+      <origin
+        xyz="1.7361E-10 2.1498E-10 0.016528"
+        rpy="0 0 0" />
+      <mass
+        value="0.21549" />
+      <inertia
+        ixx="0.00026778"
+        ixy="-3.6347E-05"
+        ixz="-2.8754E-13"
+        iyy="0.0003499"
+        iyz="-5.1247E-13"
+        izz="0.0005275" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_7"
+    type="revolute">
+    <origin
+      xyz="0.0163331090754775 -0.0895822161514052 0"
+      rpy="-1.5707963267949 1.17924892649585 -2.96124825710572" />
+    <parent
+      link="link6" />
+    <child
+      link="link7" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.142"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="grip1">
+    <inertial>
+      <origin
+        xyz="-0.020933 -0.021676 -0.025435"
+        rpy="0 0 0" />
+      <mass
+        value="0.11653" />
+      <inertia
+        ixx="7.0551E-05"
+        ixy="2.9858E-06"
+        ixz="-5.1003E-06"
+        iyy="5.7216E-05"
+        iyz="2.3868E-05"
+        izz="6.7543E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/grip1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/grip1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grip_1"
+    type="prismatic">
+    <origin
+      xyz="-0.0221949059505385 0.0183230993801066 0.076196530879624"
+      rpy="-1.09815881528803 -0.188016054643132 1.83781443689534" />
+    <parent
+      link="link7" />
+    <child
+      link="grip1" />
+    <axis
+      xyz="-0.0934551409169919 0.437339841126079 0.894427190999917" />
+    <limit
+      lower="-0.03"
+      upper="0"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="grip2">
+    <inertial>
+      <origin
+        xyz="0.021231 -0.021384 -0.025435"
+        rpy="0 0 0" />
+      <mass
+        value="0.11653" />
+      <inertia
+        ixx="7.0631E-05"
+        ixy="-2.8001E-06"
+        ixz="4.7694E-06"
+        iyy="5.7136E-05"
+        iyz="2.3936E-05"
+        izz="6.7543E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/grip2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobot/meshes/grip2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grip_2"
+    type="prismatic">
+    <origin
+      xyz="0.00447390105476647 0.0284312157739759 0.0761965308796241"
+      rpy="-1.09931642219313 0.175685860893411 -1.11962753486987" />
+    <parent
+      link="link7" />
+    <child
+      link="grip2" />
+    <axis
+      xyz="-0.0873917410068469 -0.43859170489624 -0.894427190999917" />
+    <limit
+      lower="0"
+      upper="0.03"
+      effort="200"
+      velocity="3" />
+  </joint>
+
+  <transmission name="link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_1_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+
+ <transmission name="link_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_2_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+
+ <transmission name="link_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_4">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_3_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+
+ <transmission name="link_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_5">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_4_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+
+ <transmission name="link_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_6">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_5_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+
+ <transmission name="link_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_7">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_6_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+
+ <transmission name="link_7_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="grip_1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_7_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+
+ <transmission name="link_8_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="grip_2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_8_motor">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+ </transmission>
+ <gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/mobot</robotNamespace>
+    <controlPeriod>0.001</controlPeriod>
+    <legacyModeNS>false</legacyModeNS>
+    </plugin>
+  </gazebo>
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/mobot</robotNamespace>
+    <leftFrontJoint>frontleftwheel</leftFrontJoint>
+    <rightFrontJoint>frontrightjoint</rightFrontJoint>
+    <leftRearJoint>rearleftwheel</leftRearJoint>
+    <rightRearJoint>rightwheeljoint</rightRearJoint>
+    <wheelSeparation>0.7</wheelSeparation>
+    <wheelDiameter>0.177</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>50</torque>
+
+    <topicName>cmd_vel</topicName>
+    <odometryTopic>odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <broadcastTF>true</broadcastTF>
+    
+    <commandTopic>cmd_vel</commandTopic>
+    <topic_name_twist>cmd_vel</topic_name_twist>
+    <topic_name_joint>joint</topic_name_joint>
+
+    <covariance_x>0.0001</covariance_x>
+    <covariance_y>0.0001</covariance_y>
+    <covariance_z>0.01</covariance_z>
+
+  </plugin>
+</gazebo>
+  <!--######################################################################-->
+  <gazebo reference="frontleftwheel">
+  <mu1 value="1.0"/>
+  <mu2 value="1.0"/>
+  <kp value="1000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0"/>
+  <max_vel>1</max_vel>
+
+  </gazebo>
+
+  <gazebo reference="frontrightjoint">
+  <mu1 value="1.0"/>
+  <mu2 value="1.0"/>
+  <kp value="1000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0"/>
+  <max_vel>1</max_vel>
+
+  </gazebo>
+
+  <gazebo reference="rearleftwheel">
+  <mu1 value="1.0"/>
+  <mu2 value="1.0"/>
+  <kp value="1000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0"/>
+  <max_vel>1</max_vel>
+
+  </gazebo>
+
+  <gazebo reference="rightwheeljoint">
+  <mu1 value="1.0"/>
+  <mu2 value="1.0"/>
+  <kp value="1000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0"/>
+  <max_vel>1</max_vel>
+  </gazebo>
+
+ <transmission name="left_motor" type="SimpleTransmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="left_motor">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="frontleftwheel">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+<transmission name="right_motor" type="SimpleTransmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="right_motor">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="frontrightjoint">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+<transmission name="rear_lmotor" type="SimpleTransmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="rear_lmotor">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="rearleftwheel">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+<transmission name="rear_rmotor" type="SimpleTransmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="rear_rmotor">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="rightwheeljoint">
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+ <gazebo>
+    <plugin name="control"  filename="libgazebo_ros_control.so">
+      <robotNamespace>/mobot</robotNamespace> 
+    </plugin>
+ </gazebo>
+ <gazebo reference="link_2">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+ <gazebo reference="link_3">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+ <gazebo reference="link_4">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+ <gazebo reference="link_5">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+ <gazebo reference="link_6">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+ <gazebo reference="link_7">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+ <gazebo reference="grip_1">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+ <gazebo reference="grip_2">
+     <selfCollide>true</selfCollide>
+ </gazebo>
+
+</robot>
+
